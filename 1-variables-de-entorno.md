@@ -1,6 +1,6 @@
 # Variables de Entorno
 ### ¿Qué son las variables de entorno?
-# COMPLETAR
+Son pares nombre-valor dinámicos que almacenan información de configuración para programas y sistemas operativos, como la ubicación de carpetas o datos de autenticación. Se definen fuera del código de una aplicación y pueden actualizarse sin necesidad de modificar el programa. Son esenciales para desacoplar la configuración de la aplicación, asegurar la coherencia y permitir la automatización
 
 ### Para crear un contenedor con variables de entorno
 
@@ -10,18 +10,22 @@ docker run -d --name <nombre contenedor> -e <nombre variable1>=<valor1> -e <nomb
 
 ### Crear un contenedor a partir de la imagen de nginx:alpine con las siguientes variables de entorno: username y role. Para la variable de entorno rol asignar el valor admin.
 
-# COMPLETAR
+```
+docker run -d --name srv-web nginx:alpine -e username=aesir -e role=admin
+```
 
-# CAPTURA CON LA COMPROBACIÓN DE LA CREACIÓN DE LAS VARIABLES DE ENTORNO DEL CONTENEDOR ANTERIOR
+![Prueba](captura1.jpg)
 
 ### Crear un contenedor con la imagen de mysql, mapear todos los puertos
-# COMPLETAR
+```
+docker run -P -d --name some-mysql mysql
+```
 
 ### ¿El contenedor se está ejecutando?
-# COMPLETAR
+No
 
 ### Identificar el problema
-# COMPLETAR
+Se deben especificar una variable de entorno para tener al contenedor en ejeecución.
 
 ### Para crear un contenedor con variables de entorno especificadas
 - Portabilidad: Las aplicaciones se vuelven más portátiles y pueden ser desplegadas en diferentes entornos (desarrollo, pruebas, producción) simplemente cambiando el archivo de variables de entorno.
@@ -31,9 +35,15 @@ docker run -d --name <nombre contenedor> -e <nombre variable1>=<valor1> -e <nomb
 - Control de Acceso: Los archivos de variables de entorno pueden ser gestionados con permisos específicos, limitando quién puede ver o modificar la configuración sensible.
 
 ### Crear un contenedor con mysql, mapear todos los puertos y configurar las variables de entorno mediante un archivo
-# COMPLETAR
+```
+docker run -P -d --name some-mysql -e MYSQL_ROOT_PASSWORD=12345 -d mysql
+```
 
-# CAPTURA CON LA COMPROBACIÓN DE LA CREACIÓN DE LAS VARIABLES DE ENTORNO DEL CONTENEDOR ANTERIOR 
+![SQL](captura1.1.jpg)
 
 ### ¿Qué bases de datos existen en el contenedor creado?
-# COMPLETAR
+Existen 4 bases de datos: 
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
