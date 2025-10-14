@@ -19,6 +19,7 @@ La figura presenta el esquema creado en donde los puertos son:
 ### Acceder desde el cliente al servidor postgres creado.
 ![Imagen](captura2.jpg)
 ### Crear la base de datos info, y dentro de esa base la tabla personas, con id (serial) y nombre (varchar), agregar un par de registros en la tabla, obligatorio incluir su nombre.
+![Imagen](captura2.2.jpg)
 ## Desde el servidor postgresl
 ### Acceder al servidor
 ### Conectarse a la base de datos info
