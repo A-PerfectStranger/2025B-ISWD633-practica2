@@ -48,10 +48,30 @@ docker network ls
 
 ![Imagen](esquema-ejercicio-redes.PNG)
 
-# COLOCAR UNA CAPTURA DE LAS REDES EXISTENTES CREADAS
+```
+docker run -d --name contenedor1 -e username=aesir -e role=admin --network net-curso01 nginx:alpine
+```
+```
+docker run -d --name contenedor2 -e username=aesir -e role=admin --network net-curso01 nginx:alpine
+```
+```
+docker run -d --name contenedor3 -e username=aesir -e role=admin --network net-curso01 nginx:alpine
+```
+```
+docker run -d --name contenedor4 -e username=aesir -e role=admin --network net-curso02 nginx:alpine
+```
+```
+docker network connect net-curso02 contenedor3
+```
+```
+docker network ls
+```
+![Imagen](captura3.jpg)
 
-# COLOCAR UNA(S) CAPTURAS(S) DE LOS CONTENEDORES CREADOS EN DONDE SE EVIDENCIE A QUÉ RED ESTÁN VINCULADOS
-
+## RED net-curso01
+![Imagen](captura3.1.jpg)
+## RED net-curso02
+![Imagen](captura3.2.jpg)
 ### Para eliminar las redes creadas
 ```
 docker network rm <nombre de la red>
