@@ -34,19 +34,24 @@ De acuerdo con el trabajo realizado, en el esquema del ejercicio el puerto a es 
 
 Ingresar desde el navegador al wordpress y finalizar la configuración de instalación.
 ![Imagen](captura4.jpg)
+![Imagen](captura4.1.png)
 
 Desde el panel de admin: cambiar el tema y crear una nueva publicación.
+![Imagen](captura4.2.png)
+
 Ingresar a: http://localhost:9300/ 
 recordar que a es el puerto que usó para el mapeo con wordpress
-# COLOCAR UNA CAPTURA DEL SITO EN DONDE SEA VISIBLE LA PUBLICACIÓN.
+![Imagen](captura4.3.png)
 
 ### Eliminar el contenedor wordpress
-# COMPLETAR
+```
+docker rm -f wordpress
+```
 
 ### Crear nuevamente el contenedor wordpress
 Ingresar a: http://localhost:9300/ 
 recordar que a es el puerto que usó para el mapeo con wordpress
 
 ### ¿Qué ha sucedido, qué puede observar?
-# COMPLETAR
+Aparece la publicacion hecha anteriormente, seguramente debido a los datos guardados en mysql
 
